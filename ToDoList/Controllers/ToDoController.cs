@@ -8,7 +8,7 @@ namespace ToDoList.Controllers
     {
         private static readonly string[] Tasks = new[]
         {
-            "Task1", "Task2", "Task3"
+            "Task1", "Task2", "Task3", "Task4"
         };
 
         private readonly ILogger<ToDoController> _logger;
