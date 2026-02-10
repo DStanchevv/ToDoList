@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ToDoList.Controllers
@@ -18,7 +19,7 @@ namespace ToDoList.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetTask")]
+        [HttpGet(Name = "GetTask"), Authorize]
         public IEnumerable<ToDo> Get()
         {
             return Enumerable.Range(1, 2).Select(index => new ToDo
